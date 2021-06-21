@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf53418f-2250-4160-930b-81123b193ce6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="e01df974-ce5e-4619-a4fa-7b5bf7a188f7" />
+  <component name="ProjectId" id="1u7LIXmB5FLjr7OS6RufkcH7LsX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.py" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../../Program Files/python/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf53418f-2250-4160-930b-81123b193ce6" name="Default Changelist" comment="" />
+      <created>1624011602007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624011602007</updated>
+      <workItem from="1624011603074" duration="222000" />
+      <workItem from="1624012164103" duration="877000" />
+      <workItem from="1624013065707" duration="1126000" />
+      <workItem from="1624015320452" duration="69000" />
+      <workItem from="1624015414060" duration="274000" />
+      <workItem from="1624015704177" duration="250000" />
+      <workItem from="1624016235671" duration="690000" />
+      <workItem from="1624016950146" duration="159000" />
+      <workItem from="1624017132773" duration="59000" />
+      <workItem from="1624017215182" duration="51000" />
+      <workItem from="1624017281446" duration="164000" />
+      <workItem from="1624269802919" duration="58000" />
+      <workItem from="1624269875556" duration="782000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="91" key="#Inspections" timestamp="1624015123521">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624015123521" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1624015357331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624015357331" />
+    <state x="223" y="63" width="1089" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624017312496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="63" width="1089" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017312496" />
+    <state x="548" y="116" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1624013969294">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="116" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624013969294" />
+    <state x="637" y="167" width="577" height="489" key="EnvironmentVariablesDialog" timestamp="1624013932896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="637" y="167" width="577" height="489" key="EnvironmentVariablesDialog/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624013932896" />
+    <state x="548" y="191" key="FileChooserDialogImpl" timestamp="1624270040804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624015051682" />
+    <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1624270040804" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444948" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444947" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444947" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444948" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1624272794796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1624270042090">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017432863" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624270042090" />
+    <state x="435" y="33" key="new project wizard" timestamp="1624270041368">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1624270041368" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cofemolka_bot$main_py.coverage" NAME="main.py Coverage Results" MODIFIED="1624269969507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
