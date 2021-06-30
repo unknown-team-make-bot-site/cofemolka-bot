@@ -4,7 +4,7 @@ from telebot import types
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
 
-
+#test
 
 @bot.message_handler(commands=['hello'])
 def hello(message):
@@ -30,3 +30,4 @@ def query_handler(call):
     bot.send_message(call.message.chat.id, result)
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
 bot.polling(none_stop=True)
+
