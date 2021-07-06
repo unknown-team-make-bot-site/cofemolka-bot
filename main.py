@@ -11,7 +11,7 @@ def hello(message):
                                       'и оставить отзыв :)\nПриятного аппетита!')
 
 #database
-connect = sql.connect('feedback.db')
+connect = sql.connect('feedback.db', check_same_thread = False)
 
 @bot.message_handler(commands=['start'])
 def menu(message):
@@ -31,7 +31,7 @@ def query_handler(call):
         with connect:
             current = connect.cursor()
             current.execute(""" CREATE TABLE IF NOT EXISTS feedback (
-        id integer PRIMARY KEY
+        id integer PRIMARY KEY,
         description text NOT NULL);
     """)
     connect.commit()
