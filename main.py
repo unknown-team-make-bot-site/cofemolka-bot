@@ -1,16 +1,17 @@
 import telebot
 import config
 from telebot import types
+import sqlite3 as sql
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
-
 
 @bot.message_handler(commands=['hello'])
 def hello(message):
     bot.send_message(message.chat.id, 'Привет я Cofeemolka_bot, у меня вы можете ознакомиться с мееню '
                                       'и оставить отзыв :)\nПриятного аппетита!')
 
-
+#database
+con = sql.connect('feddback.db')
 
 @bot.message_handler(commands=['start'])
 def menu(message):
@@ -27,6 +28,11 @@ def query_handler(call):
         result = '1.\n 2.\n 3.'
     elif call.data == 'feedback':
         result = 'Оставьте отзыв:'
+        with con:
+        	cur = con.cursor()
+        	cur.execute("CREATE TABLE IF NOT EXITS `feedback` (`feed` STRING) ")
+        	con.commit()
     bot.send_message(call.message.chat.id, result)
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
 bot.polling(none_stop=True)
+
