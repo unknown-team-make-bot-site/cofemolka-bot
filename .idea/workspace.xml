@@ -25,25 +25,31 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="cofemolka-bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../../../Program Files/python/python.exe" />
+      <option name="SDK_HOME" value="C:\Users\1\AppData\Local\Microsoft\WindowsApps\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
@@ -77,7 +83,8 @@
       <workItem from="1624269802919" duration="58000" />
       <workItem from="1624269875556" duration="782000" />
       <workItem from="1624373843957" duration="1842000" />
-      <workItem from="1625580311012" duration="313000" />
+      <workItem from="1625580311012" duration="1504000" />
+      <workItem from="1625581827606" duration="1210000" />
     </task>
     <servers />
   </component>
@@ -105,31 +112,31 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="637" y="167" width="577" height="489" key="EnvironmentVariablesDialog/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624013932896" />
-    <state x="548" y="191" key="FileChooserDialogImpl" timestamp="1624270040804">
+    <state x="548" y="191" key="FileChooserDialogImpl" timestamp="1625582588938">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624015051682" />
-    <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1624270040804" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1624272794796">
+    <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1625582588938" />
+    <state width="757" height="245" key="GridCell.Tab.0.bottom" timestamp="1625587337148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444948" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1624272794796">
+    <state width="757" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625587337148" />
+    <state width="757" height="245" key="GridCell.Tab.0.center" timestamp="1625587337148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444947" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1624272794796">
+    <state width="757" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625587337148" />
+    <state width="757" height="245" key="GridCell.Tab.0.left" timestamp="1625587337148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444947" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1624272794796">
+    <state width="757" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625587337148" />
+    <state width="757" height="245" key="GridCell.Tab.0.right" timestamp="1625587337148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017444948" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
+    <state width="757" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625587337148" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1624272794796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -146,21 +153,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624272794796" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1624270042090">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1625586971597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1624017432863" />
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624270042090" />
-    <state x="435" y="33" key="new project wizard" timestamp="1624270041368">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625586971597" />
+    <state x="435" y="33" key="new project wizard" timestamp="1625582041541">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="435" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1624270041368" />
+    <state x="435" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1625582041541" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cofemolka_bot$main_py.coverage" NAME="main.py Coverage Results" MODIFIED="1624269969507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
