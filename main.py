@@ -5,13 +5,16 @@ import sqlite3 as sql
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
 
+
 @bot.message_handler(commands=['hello'])
 def hello(message):
     bot.send_message(message.chat.id, 'Привет я кофемолка, у меня вы можете ознакомиться с меню '
                                       'и оставить отзыв :)\nПриятного аппетита!')
 
-#database
-connect = sql.connect('feedback.db', check_same_thread = False)
+
+# database
+connect = sql.connect('feedback.db', check_same_thread=False)
+
 
 @bot.message_handler(commands=['start'])
 def menu(message):
@@ -19,7 +22,8 @@ def menu(message):
     markup.add(telebot.types.InlineKeyboardButton(text='Меню блюд епт', callback_data='food_menu'))
     markup.add(telebot.types.InlineKeyboardButton(text='Оставить отзыв', callback_data='feedback'))
     hello(message)
-    bot.send_message(message.chat.id, text='Выберете дейтвие:', reply_markup=markup)
+    bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=markup)
+
 
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
@@ -37,4 +41,6 @@ def query_handler(call):
     connect.commit()
     bot.send_message(call.message.chat.id, result)
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
+
+
 bot.polling(none_stop=True)
