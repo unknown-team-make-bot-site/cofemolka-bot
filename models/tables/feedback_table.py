@@ -1,3 +1,4 @@
+from models.entities.feedback import Feedback
 from utils.databaseutils import DatabaseUtils
 
 
@@ -9,5 +10,5 @@ class FeedbackTable(object):
         return DatabaseUtils().create_table(FeedbackTable.TABLE_NAME, "id integer PRIMARY KEY, description text NOT NULL")
 
     @staticmethod
-    def get_feedback():
-        return DatabaseUtils().get()
+    def get_feedbacks():
+        return [Feedback(tupl) for tupl in DatabaseUtils().get(FeedbackTable.TABLE_NAME)]
