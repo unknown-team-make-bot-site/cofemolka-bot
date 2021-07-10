@@ -36,6 +36,7 @@ def get_menu_str():
 
 @bot.callback_query_handler(func=lambda call: call.data == 'food_menu')
 def menu_ans(call):
+    MenuTable.create_table()
     menu = get_menu_str()
     bot.send_message(call.message.chat.id, menu)
 

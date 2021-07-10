@@ -10,8 +10,8 @@ class MenuTable(object):
     def create_table():
         cols_str = """
         id integer PRIMARY KEY, name text NOT NULL, description text"""
-        return DatabaseUtils().create_table(FeedbackTable.TABLE_NAME, cols_str)
+        return DatabaseUtils().create_table(MenuTable.TABLE_NAME, cols_str)
 
     @staticmethod
     def get_dishes():
-        return [Dish.fromTuple(tupl) for tupl in DatabaseUtils().get(FeedbackTable.TABLE_NAME)]
+        return [Dish.fromTuple(tupl) for tupl in DatabaseUtils().get(MenuTable.TABLE_NAME)]
