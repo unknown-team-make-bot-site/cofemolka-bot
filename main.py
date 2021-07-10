@@ -1,8 +1,6 @@
 import telebot
-import config
-from telebot import types
-import sqlite3 as sql
 
+import config
 from models.tables.feedback_table import FeedbackTable
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
@@ -17,7 +15,7 @@ def hello(message):
 @bot.message_handler(commands=['start'])
 def menu(message):
     markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton(text='Меню блюд епт', callback_data='food_menu'))
+    markup.add(telebot.types.InlineKeyboardButton(text='Меню блюд', callback_data='food_menu'))
     markup.add(telebot.types.InlineKeyboardButton(text='Оставить отзыв', callback_data='feedback'))
     hello(message)
     bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=markup)
