@@ -3,6 +3,8 @@ import config
 from telebot import types
 import sqlite3 as sql
 
+from models.tables.feedback_table import FeedbackTable
+
 bot = telebot.TeleBot(config.conf['TOKEN'])
 
 
@@ -32,13 +34,7 @@ def query_handler(call):
         result = '1.\n 2.\n 3.'
     elif call.data == 'feedback':
         result = 'Оставьте отзыв:'
-        with connect:
-            current = connect.cursor()
-            current.execute(""" CREATE TABLE IF NOT EXISTS feedback (
-        id integer PRIMARY KEY,
-        description text NOT NULL);
-    """)
-    connect.commit()
+        FeedbackTable.create_table()
     bot.send_message(call.message.chat.id, result)
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
 
