@@ -26,11 +26,11 @@ class DatabaseUtils(object, metaclass=Singleton):
     def close(self):
         self.conn.close()
 
-    def add(self, database, table, col_list="", values=""):
+    def add(self, table, col_list="", values=""):
         columns = ",".join([col for col in col_list])
         query = f"""
         INSERT INTO
-        {database}.{table} ({columns})
+        {table} ({columns})
         VALUES
         ({"".join(values)});
         """
@@ -46,8 +46,8 @@ class DatabaseUtils(object, metaclass=Singleton):
         self.conn.commit()
         return cursor
 
-    def delete_row(self, table, row_id, database):
-        query = f"DELETE FROM {database}.{table} WHERE id = {row_id}"
+    def delete_row(self, table, row_id):
+        query = f"DELETE FROM {table} WHERE id = {row_id}"
         self.exec(query)
 
     def exec_fetchone(self, query):
@@ -66,9 +66,9 @@ class DatabaseUtils(object, metaclass=Singleton):
         result = cursor.fetchall()
         return result
 
-    def get_rows_count(self, database, table):
+    def get_rows_count(self, table):
         query = f"""
-        SELECT COUNT(*) FROM {database}.{table}
+        SELECT COUNT(*) FROM {table}
         """
 
         return self.exec_fetchone(query)
@@ -76,30 +76,30 @@ class DatabaseUtils(object, metaclass=Singleton):
     def close(self):
         if self.conn: self.conn.close()
 
-    def get(self, database, table):
+    def get(self, table):
         query = f"""
-        SELECT * FROM {database}.{table}
+        SELECT * FROM {table}
         """
         return self.exec_fetchall(query)
 
-    def get_by_ids(self, ids, database, table):
+    def get_by_ids(self, ids, table):
         if len(ids) == 0: return None
         query = f"""
-               SELECT * FROM {database}.{table} WHERE id in ({", ".join([str(id) for id in ids])})
+               SELECT * FROM {table} WHERE id in ({", ".join([str(id) for id in ids])})
                """
         return self.exec_fetchall(query)
 
-    def update_row(self, table, row_id, updates_str, database):
-        query = f"UPDATE {database}.{table} SET {updates_str} WHERE id = {row_id}"
+    def update_row(self, table, row_id, updates_str):
+        query = f"UPDATE {table} SET {updates_str} WHERE id = {row_id}"
         return self.exec(query)
 
     @staticmethod
     def timestamp_to_sql_time(ts):
         return datetime.datetime.fromtimestamp(ts).strftime(DatabaseUtils.TIME_FORMAT)
 
-    def get_by_id(self, row_id, database, table):
-        return self.get_by_ids([row_id], database=database, table=table)[0]
+    def get_by_id(self, row_id, table):
+        return self.get_by_ids([row_id], table=table)[0]
 
-    def get_by_param(self, param, val, table, database):
-        query = f"SELECT * FROM {database}.{table} WHERE {param} = '{val}';"
+    def get_by_param(self, param, val, table):
+        query = f"SELECT * FROM {table} WHERE {param} = '{val}';"
         return self.exec_fetchall(query)

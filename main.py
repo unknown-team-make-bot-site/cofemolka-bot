@@ -1,5 +1,5 @@
 import telebot
-
+from telebot import types
 import config
 from models.tables.feedback_table import FeedbackTable
 
@@ -14,9 +14,10 @@ def hello(message):
 
 @bot.message_handler(commands=['start'])
 def menu(message):
-    markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton(text='Меню блюд', callback_data='food_menu'))
-    markup.add(telebot.types.InlineKeyboardButton(text='Оставить отзыв', callback_data='feedback'))
+    markup = types.InlineKeyboardMarkup()
+    menu_btn = types.InlineKeyboardButton(text='Меню блюд', callback_data='food_menu')
+    send_feedback_btn = types.InlineKeyboardButton(text='Оставить отзыв', callback_data='feedback')
+    markup.add(menu_btn, send_feedback_btn)
     hello(message)
     bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=markup)
 
@@ -25,6 +26,7 @@ def menu(message):
 def query_handler(call):
     result = ''
     if call.data == 'food_menu':
+        feedbacks = FeedbackTable.get_feedbacks()
         result = '1.\n 2.\n 3.'
     elif call.data == 'feedback':
         result = 'Оставьте отзыв:'

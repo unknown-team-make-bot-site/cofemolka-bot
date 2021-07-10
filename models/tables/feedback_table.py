@@ -7,3 +7,7 @@ class FeedbackTable(object):
     @staticmethod
     def create_table():
         return DatabaseUtils().create_table(FeedbackTable.TABLE_NAME, "id integer PRIMARY KEY, description text NOT NULL")
+
+    @staticmethod
+    def get_feedback():
+        return DatabaseUtils().get()
