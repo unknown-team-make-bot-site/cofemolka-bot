@@ -14,10 +14,6 @@ def hello(message):
                                       'и оставить отзыв :)\nПриятного аппетита!')
 
 
-# database
-connect = sql.connect('feedback.db', check_same_thread=False)
-
-
 @bot.message_handler(commands=['start'])
 def menu(message):
     markup = telebot.types.InlineKeyboardMarkup()
