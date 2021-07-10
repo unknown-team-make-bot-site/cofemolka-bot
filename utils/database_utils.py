@@ -8,20 +8,16 @@ class DatabaseUtils(object, metaclass=Singleton):
     TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 
     def __init__(self):
-        self.conn = sql.connect('../feedback.db', check_same_thread=False)
+        self.conn = sql.connect('../mydb.db', check_same_thread=False)
 
     def connect(self):
-        self.conn = sql.connect('../feedback.db', check_same_thread=False)
+        self.conn = sql.connect('../mydb.db', check_same_thread=False)
 
     def create_table(self, tablename, cols_str):
-        with self.conn:
-            current = self.conn.cursor()
-            current.execute(f""" CREATE TABLE IF NOT EXISTS {tablename} ({cols_str});
-        """)
+        current = self.conn.cursor()
+        q = f" CREATE TABLE IF NOT EXISTS {tablename} ({cols_str});"
+        current.execute(q)
         self.conn.commit()
-
-    def create_feedback_table(self):
-        return self.create_table('feedback')
 
     def close(self):
         self.conn.close()
@@ -34,7 +30,6 @@ class DatabaseUtils(object, metaclass=Singleton):
         VALUES
         ({"".join(values)});
         """
-
         cursor = self.exec(query)
         return cursor.lastrowid
 
@@ -103,3 +98,7 @@ class DatabaseUtils(object, metaclass=Singleton):
     def get_by_param(self, param, val, table):
         query = f"SELECT * FROM {table} WHERE {param} = '{val}';"
         return self.exec_fetchall(query)
+
+    def delete_all(self, table_name):
+        query = f"DELETE FROM {table_name}"
+        return self.exec(query)

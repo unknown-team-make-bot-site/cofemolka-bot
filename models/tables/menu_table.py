@@ -1,9 +1,10 @@
+from models.entities.dish import Dish
 from models.tables.feedback_table import FeedbackTable
-from utils.databaseutils import DatabaseUtils
+from utils.database_utils import DatabaseUtils
 
 
 class MenuTable(object):
-    TABLE_NAME = 'feedback'
+    TABLE_NAME = 'menu'
 
     @staticmethod
     def create_table():
@@ -13,4 +14,4 @@ class MenuTable(object):
 
     @staticmethod
     def get_dishes():
-        return [Feedback(tupl[1]) for tupl in DatabaseUtils().get(FeedbackTable.TABLE_NAME)]
+        return [Dish.fromTuple(tupl) for tupl in DatabaseUtils().get(FeedbackTable.TABLE_NAME)]
