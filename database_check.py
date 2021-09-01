@@ -6,6 +6,7 @@ FeedbackTable.delete_all()
 assert len(FeedbackTable.get_feedbacks()) == 0
 f_txt = 'text!!!'
 f1 = Feedback(f_txt)
+f1.feedback_text
 row_id = FeedbackTable.add_feedback(f1)
 print(row_id)
 got_feedbacks = FeedbackTable.get_feedbacks()

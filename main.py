@@ -3,9 +3,11 @@ from telebot import types
 import config
 from models.tables.feedback_table import FeedbackTable
 from models.tables.menu_table import MenuTable
+import requests
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
-
+feedbacks = FeedbackTable.create_table()
+step: str = ""
 
 @bot.message_handler(commands=['hello'])
 def hello(message):
@@ -14,11 +16,13 @@ def hello(message):
 
 
 @bot.message_handler(commands=['start'])
-def menu(message):
-    markup = types.InlineKeyboardMarkup()
-    menu_btn = types.InlineKeyboardButton(text='Меню блюд', callback_data='food_menu')
-    send_feedback_btn = types.InlineKeyboardButton(text='Оставить отзыв', callback_data='feedback')
-    markup.add(menu_btn, send_feedback_btn)
+def start_handler(message):
+    global step
+    step = "start"
+    if (message.chat.id == 347739791):
+        markup = set_markup("admin")
+    else:
+        markup = set_markup(step)
     hello(message)
     bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=markup)
 
@@ -43,9 +47,44 @@ def menu_ans(call):
 
 @bot.callback_query_handler(func=lambda call: call.data == 'feedback')
 def feedback_ans(call):
-    FeedbackTable.create_table()
     result = get_feedbacks_str()
     bot.send_message(call.message.chat.id, result)
 
+@bot.message_handler(regexp = "Меню блюд")
+def show_menu(message):
+    global step
+    step = "menu"
+    markup = set_markup(step)
+    bot.send_message(message.chat.id,"Выберите категорию:", reply_markup=markup)
+    step = "start"
 
+@bot.message_handler(regexp = "Оставить отзыв")
+def check_feedback(message):
+    global step
+    step = "feedback"
+
+@bot.message_handler(func=lambda m: step == "feedback", content_types="text")
+def add_feedback(message):
+    global step
+    FeedbackTable.add_feedback(message.text)
+    bot.send_message(message.chat.id, "Спасибо за Ваш отзыв!")
+    step = "start"
+
+def set_markup(step):
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    if (step == "start"):
+        markup.add('Меню блюд', 'Оставить отзыв')
+    elif (step == "menu"):
+        markup.add("Кофе", "Перекусить", "Десерты", "Другие напитки", "Назад")
+    elif (step == "admin"):
+        markup.add('Добавить кофе', 'добавить к десертам', 'Добавить к перекусить', "Добавить к напиткам")
+    return markup
+
+@bot.message_handler(regexp="Назад")
+def return_back(message):
+    markup = set_markup(step)
+    bot.send_message(message.chat.id, "Выберите категорию:", reply_markup = markup)
+
+
+# message = bot.get_chat()
 bot.polling(none_stop=True)
