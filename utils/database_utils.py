@@ -15,31 +15,32 @@ class DatabaseUtils(object, metaclass=Singleton):
 
     def create_table(self, tablename, cols_str):
         current = self.conn.cursor()
-        q = f" CREATE TABLE IF NOT EXISTS {tablename} ({cols_str});"
+        q = f"CREATE TABLE IF NOT EXISTS {tablename} ({cols_str});"
         current.execute(q)
         self.conn.commit()
 
     def close(self):
         self.conn.close()
 
+    def exec(self, query, values = ""):
+            if not self.conn:
+                self.connect()
+            cursor = self.conn.cursor()
+            cursor.execute(query, values)
+            self.conn.commit()
+            return cursor
+
     def add(self, table, col_list="", values=""):
-        columns = ",".join([col for col in col_list])
+        columns = ", ".join([col for col in col_list])
         query = f"""
         INSERT INTO
         {table} ({columns})
         VALUES
-        ({"".join(values)});
+        (?, ?, ?, ?, ?);
         """
-        cursor = self.exec(query)
+        cursor = self.exec(query, values=values)
         return cursor.lastrowid
 
-    def exec(self, query):
-        if not self.conn:
-            self.connect()
-        cursor = self.conn.cursor()
-        cursor.execute(query)
-        self.conn.commit()
-        return cursor
 
     def delete_row(self, table, row_id):
         query = f"DELETE FROM {table} WHERE id = {row_id}"
@@ -101,4 +102,8 @@ class DatabaseUtils(object, metaclass=Singleton):
 
     def delete_all(self, table_name):
         query = f"DELETE FROM {table_name}"
+        return self.exec(query)
+
+    def delete_table(self, table_name):
+        query = f"DROP TABLE {table_name}"
         return self.exec(query)

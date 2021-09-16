@@ -15,7 +15,7 @@ class FeedbackTable(object):
     @staticmethod
     def add_feedback(text):
         col_list = ['feedback_text']
-        values = f"'{text}'"
+        values = text
         return DatabaseUtils().add(TABLE_NAME, col_list, values)
 
     @staticmethod

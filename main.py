@@ -4,6 +4,7 @@ import config
 from models.tables.feedback_table import FeedbackTable
 from models.tables.menu_table import MenuTable
 import requests
+import json
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
 feedbacks = FeedbackTable.create_table()
@@ -19,7 +20,8 @@ def hello(message):
 def start_handler(message):
     global step
     step = "start"
-    if (message.chat.id == 347739791):
+    # insert_data()
+    if (message.chat.id == ""):
         markup = set_markup("admin")
     else:
         markup = set_markup(step)
@@ -32,6 +34,10 @@ def get_feedbacks_str():
     f_str = "".join([f'{idx + 1}. {f.feedback_text}\n' for idx, f in enumerate(feedbacks)])
     return f_str if f_str else 'Пока что нет отзывов'
 
+@bot.message_handler(regexp="кофе")
+def get_coffee(messsage):
+    coffee = MenuTable.get_dishes()
+    bot.send_message(messsage.chat.id, coffee)
 
 def get_menu_str():
     menu = MenuTable.get_dishes()
@@ -85,6 +91,11 @@ def return_back(message):
     markup = set_markup(step)
     bot.send_message(message.chat.id, "Выберите категорию:", reply_markup = markup)
 
+def insert_data():
+    with open('coffee.json', encoding="utf-8", errors="ignore") as json_file:
+        data = json.load(json_file)
+        for coffee in data:
+            MenuTable.add_dishes(coffee['name'], coffee['cost'], type="coffee", volume=coffee['volume'])
 
 # message = bot.get_chat()
 bot.polling(none_stop=True)
