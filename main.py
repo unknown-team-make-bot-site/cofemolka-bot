@@ -19,15 +19,14 @@ def hello(message):
 @bot.message_handler(commands=['start'])
 def start_handler(message):
     global step
-    step = "start"
     # insert_data()
     if (message.chat.id == ""):
-        markup = set_markup("admin")
+        step = "admin"
     else:
-        markup = set_markup(step)
+        step = "start"
+    markup = set_markup(step)
     hello(message)
     bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=markup)
-
 
 def get_feedbacks_str():
     feedbacks = FeedbackTable.get_feedbacks()
@@ -35,14 +34,19 @@ def get_feedbacks_str():
     return f_str if f_str else 'Пока что нет отзывов'
 
 @bot.message_handler(regexp="кофе")
-def get_coffee(messsage):
-    coffee = MenuTable.get_dishes()
-    bot.send_message(messsage.chat.id, coffee)
+def get_coffee(message):
+    coffee = get_menu_str()
+    bot.send_message(message.chat.id, coffee)
+    global step
+    step = "coffee"
+    markup = set_markup(step)
+    bot.send_message(message.chat.id, "Выберите кофе, описание и фотографию которого хотите посмотреть:", reply_markup=markup)
+    step = "menu"
 
 def get_menu_str():
     menu = MenuTable.get_dishes()
-    return "Пока что меню пустое" if not menu else menu
-
+    f_str = "".join([f'{idx+1}. {m.dish_name}, {m.cost} рублей, {m.volume} мл\n' for idx, m in enumerate(menu)])
+    return "Пока что меню пустое" if not menu else f_str
 
 @bot.callback_query_handler(func=lambda call: call.data == 'food_menu')
 def menu_ans(call):
@@ -77,19 +81,31 @@ def add_feedback(message):
     step = "start"
 
 def set_markup(step):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=4)
     if (step == "start"):
         markup.add('Меню блюд', 'Оставить отзыв')
     elif (step == "menu"):
         markup.add("Кофе", "Перекусить", "Десерты", "Другие напитки", "Назад")
     elif (step == "admin"):
         markup.add('Добавить кофе', 'добавить к десертам', 'Добавить к перекусить', "Добавить к напиткам")
+    elif (step == "coffee"):
+        s = []
+        for i in range(1, 12):
+            s.append(f"{i}")
+            if (i % 4 == 0):
+                markup.add(s[0], s[1], s[2], s[3])
+                s = []
+        markup.add(s[0], s[1], s[2])
+        markup.add('Назад')
     return markup
 
 @bot.message_handler(regexp="Назад")
 def return_back(message):
+    global step
     markup = set_markup(step)
     bot.send_message(message.chat.id, "Выберите категорию:", reply_markup = markup)
+    if (step == "menu"):
+        step = "start"
 
 def insert_data():
     with open('coffee.json', encoding="utf-8", errors="ignore") as json_file:
