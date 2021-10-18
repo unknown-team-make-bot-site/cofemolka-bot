@@ -6,7 +6,9 @@ class FeedbackTable(object):
 
     @staticmethod
     def create_table():
-        return DatabaseUtils().create_table(TABLE_NAME, "id integer PRIMARY KEY, feedback_text text NOT NULL")
+        return DatabaseUtils().create_table(
+            TABLE_NAME, "id integer PRIMARY KEY AUTOINCREMENT, "
+                        "feedback_text text NOT NULL")
 
     @staticmethod
     def get_feedbacks():
@@ -16,7 +18,7 @@ class FeedbackTable(object):
     def add_feedback(text):
         col_list = ['feedback_text']
         values = text
-        return DatabaseUtils().add(TABLE_NAME, col_list, values)
+        return DatabaseUtils().add_one_column(TABLE_NAME, col_list, values)
 
     @staticmethod
     def delete_all():

@@ -2,6 +2,16 @@ from models.entities.dish import Dish
 from models.tables.feedback_table import FeedbackTable
 from utils.database_utils import DatabaseUtils
 
+# for containing image in database we need to convert file into binary format
+'''
+example of binary data:
+10 1010 0101 0010 1001 0101 0101
+'''
+def convertToBinaryData(filename):
+        with open(filename, 'rb') as file:
+            blobData = file.read()
+        return blobData
+
 TABLE_NAME = 'menu'
 class MenuTable(object):
 
@@ -10,19 +20,25 @@ class MenuTable(object):
         cols_str = """id integer PRIMARY KEY AUTOINCREMENT,  
         name text NOT NULL, 
         description text, 
-        type text, 
+        type_id integer, 
         cost integer, 
-        volume integer"""
+        volume integer,
+        image text"""
         return DatabaseUtils().create_table(TABLE_NAME, cols_str)
 
     @staticmethod
     def get_dishes():
-        return [Dish.fromTuple(tupl) for tupl in DatabaseUtils().get(TABLE_NAME)]
+        return [Dish.fromTuple(dishes) for dishes in DatabaseUtils().get(TABLE_NAME)]
 
     @staticmethod
-    def add_dishes(name, cost, type, volume=0, description="nothing"):
-        col_list = ['name', 'description', 'type', 'cost', 'volume']
-        values = [f'{name}', f'{description}', f'{type}', cost, volume]
+    def get_type(type):
+        return [Dish.fromTuple(dishes_with_type) for dishes_with_type  in DatabaseUtils().get_type(TABLE_NAME, type)]
+
+    @staticmethod
+    def add_dishes(name, cost, type, image, volume=0, description="nothing"):
+        col_list = ['name', 'description', 'type', 'cost', 'volume', 'image']
+        # image = convertToBinaryData(image)
+        values = [f'{name}', f'{description}', f'{type}', cost, volume, image]
         return DatabaseUtils().add(TABLE_NAME, col_list, values)
 
     @staticmethod
@@ -32,3 +48,6 @@ class MenuTable(object):
     @staticmethod
     def delete_table():
         DatabaseUtils().delete_table(TABLE_NAME)
+
+
+# SELECT name FROM DISH_TYPE where id = (SELECT type_id from Dish where id = :type)

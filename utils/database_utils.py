@@ -30,17 +30,35 @@ class DatabaseUtils(object, metaclass=Singleton):
             self.conn.commit()
             return cursor
 
+    def exec_one_value(self, query, value = ""):
+        if not self.conn:
+            self.connect()
+        cursor = self.conn.cursor()
+        cursor.execute(query, (value,))
+        self.conn.commit()
+        return cursor
+
     def add(self, table, col_list="", values=""):
         columns = ", ".join([col for col in col_list])
         query = f"""
         INSERT INTO
         {table} ({columns})
         VALUES
-        (?, ?, ?, ?, ?);
+        (?, ?, ?, ?, ?, ?);
         """
         cursor = self.exec(query, values=values)
         return cursor.lastrowid
 
+    def add_one_column(self, table, col_list="", values=""):
+        columns = ", ".join([col for col in col_list])
+        query = f"""
+        INSERT INTO
+        {table} ({columns})
+        VALUES
+        (?);
+        """
+        cursor = self.exec_one_value(query, value=values)
+        return cursor.lastrowid
 
     def delete_row(self, table, row_id):
         query = f"DELETE FROM {table} WHERE id = {row_id}"
@@ -78,6 +96,11 @@ class DatabaseUtils(object, metaclass=Singleton):
         """
         return self.exec_fetchall(query)
 
+    def get_type(self, table, type):
+        query = f"""
+        SELECT * FROM {table} WHERE type={type}"""
+        return self.exec_fetchall(query)
+
     def get_by_ids(self, ids, table):
         if len(ids) == 0: return None
         query = f"""
@@ -106,4 +129,4 @@ class DatabaseUtils(object, metaclass=Singleton):
 
     def delete_table(self, table_name):
         query = f"DROP TABLE {table_name}"
-        return self.exec(query)
+        return self.exec_one_value(query)

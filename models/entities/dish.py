@@ -8,6 +8,7 @@ class Dish:
     type: str
     cost: int
     volume: int
+    image: str
 
     @staticmethod
     def fromTuple(tuple: tuple):
