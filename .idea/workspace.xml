@@ -56,7 +56,7 @@
       <recent name="D:\kofemolka\kofemolka\cofemolka-bot\models\entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.process_menu_image">
+  <component name="RunManager" selected="Python.main.py">
     <configuration name="database_check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cofemolka-bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dish" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="insert_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cofemolka-bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/entities" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/entities/dish.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/insert_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,12 +163,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="types" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cofemolka-bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0/LocalCache/local-packages/Python39/site-packages/telebot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0/LocalCache/local-packages/Python39/site-packages/telebot/types.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.process_menu_image" />
+        <item itemvalue="Python.types" />
+        <item itemvalue="Python.insert_data" />
         <item itemvalue="Python.database_check" />
+        <item itemvalue="Python.process_menu_image" />
         <item itemvalue="Python.database_utils" />
-        <item itemvalue="Python.dish" />
       </list>
     </recent_temporary>
   </component>
@@ -212,68 +234,69 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632984293410" />
-    <state width="1515" height="171" key="GridCell.Tab.0.bottom" timestamp="1634584159834">
+    <state width="1515" height="247" key="GridCell.Tab.0.bottom" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634584159834" />
-    <state width="1515" height="171" key="GridCell.Tab.0.center" timestamp="1634584159834">
+    <state width="1515" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.0.center" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634584159834" />
-    <state width="1515" height="171" key="GridCell.Tab.0.left" timestamp="1634584159834">
+    <state width="1515" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.0.left" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186101" />
     <state width="949" height="359" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634584159834" />
-    <state width="1515" height="171" key="GridCell.Tab.0.right" timestamp="1634584159834">
+    <state width="1515" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.0.right" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634584159834" />
-    <state width="1515" height="210" key="GridCell.Tab.1.bottom" timestamp="1634583424658">
+    <state width="1515" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.1.bottom" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="673" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632733542541" />
     <state width="949" height="359" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783069259" />
-    <state width="1515" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634583424658" />
-    <state width="1515" height="210" key="GridCell.Tab.1.center" timestamp="1634583424658">
+    <state width="1515" height="247" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.1.center" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="673" height="279" key="GridCell.Tab.1.center/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632733542541" />
     <state width="949" height="359" key="GridCell.Tab.1.center/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783069259" />
-    <state width="1515" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634583424658" />
-    <state width="1515" height="210" key="GridCell.Tab.1.left" timestamp="1634583424658">
+    <state width="1515" height="247" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.1.left" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="673" height="279" key="GridCell.Tab.1.left/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632733542541" />
     <state width="949" height="359" key="GridCell.Tab.1.left/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783069259" />
-    <state width="1515" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634583424658" />
-    <state width="1515" height="210" key="GridCell.Tab.1.right" timestamp="1634583424658">
+    <state width="1515" height="247" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="247" key="GridCell.Tab.1.right" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="673" height="279" key="GridCell.Tab.1.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632733542541" />
     <state width="949" height="359" key="GridCell.Tab.1.right/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783069259" />
-    <state width="1515" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634583424658" />
+    <state width="1515" height="247" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
     <state x="435" y="33" key="new project wizard" timestamp="1626982210239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="435" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1626982210239" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1634561095079">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1634730485309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1631799690104" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1634561095079" />
-    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1632727221134">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1634730485309" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1634731770136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632727221134" />
     <state x="2543" y="291" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1630343760544" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1634731770136" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,6 +307,13 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">

@@ -13,6 +13,5 @@ emojis = {
 }
 
 admins = {
-    'Daniil': 347739791,
-    '!admin': 0
+    'Daniil': 347739791
 }

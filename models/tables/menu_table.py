@@ -31,14 +31,20 @@ class MenuTable(object):
         return [Dish.fromTuple(dishes) for dishes in DatabaseUtils().get(TABLE_NAME)]
 
     @staticmethod
-    def get_type(type):
-        return [Dish.fromTuple(dishes_with_type) for dishes_with_type  in DatabaseUtils().get_type(TABLE_NAME, type)]
+    def get_dishes_with_type(type):
+        return [Dish.fromTuple(dishes_with_type) for dishes_with_type
+                in DatabaseUtils().get_dishes_with_type(TABLE_NAME, type)]
 
     @staticmethod
-    def add_dishes(name, cost, type, image, volume=0, description="nothing"):
-        col_list = ['name', 'description', 'type', 'cost', 'volume', 'image']
+    def get_count_dishes(type_id):
+        column = "type_id"
+        return DatabaseUtils().get_rows_count_with_param(TABLE_NAME,column, type_id)
+
+    @staticmethod
+    def add_dishes(name, cost, type_id, image, volume=0, description="nothing"):
+        col_list = ['name', 'description', 'type_id', 'cost', 'volume', 'image']
         # image = convertToBinaryData(image)
-        values = [f'{name}', f'{description}', f'{type}', cost, volume, image]
+        values = [f'{name}', f'{description}', f'{type_id}', cost, volume, image]
         return DatabaseUtils().add(TABLE_NAME, col_list, values)
 
     @staticmethod

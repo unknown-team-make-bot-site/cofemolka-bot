@@ -1,79 +1,91 @@
 [
-  {
-    "name" : "Эспрессо",
-    "cost" : 80,
-    "volume" : 120,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  }, 
-  {
-    "name" : "Доппио",
-    "cost" : 120,
-    "volume" : 60,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Лунго",
-    "cost" : 90,
-    "volume" : 100,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Американо",
-    "cost" : 90,
-    "volume" : 170,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Двойной американо",
-    "cost" : 150,
-    "volume" : 250,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Капучино",
-    "cost" : 110,
-    "volume" : 170,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Двойной капучинно",
-    "cost" : 150,
-    "volume" : 250,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Латте",
-    "cost" : 140,
-    "volume" : 200,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Флэт Уайт",
-    "cost" : 140,
-    "volume" : 170,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Раф",
-    "cost" : 160,
-    "volume" : 200,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  },
-  {
-    "name" : "Альтернативный кофе",
-    "cost" : 140,
-    "volume" : 250,
-    "description": "that's pretty one!",
-    "image": "coffee.jpg"
-  }
+      {
+            "name": "Эспрессо",
+            "cost": 80,
+            "volume": 120,
+            "description": "that's pretty one!",
+            "type_id": 1,
+            "image": "Эспрессо.jpg"
+      },
+      {
+            "name": "Доппио",
+            "cost": 120,
+            "volume": 60,
+            "description": "that's pretty one!",
+            "image": "Доппио.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Лунго",
+            "cost": 90,
+            "volume": 100,
+            "description": "that's pretty one!",
+            "image": "Лунго.jpeg",
+            "type_id": 1
+      },
+      {
+            "name": "Американо",
+            "cost": 90,
+            "volume": 170,
+            "description": "that's pretty one!",
+            "image": "Американо.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Двойной американо",
+            "cost": 150,
+            "volume": 250,
+            "description": "that's pretty one!",
+            "image": "Американо.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Капучино",
+            "cost": 110,
+            "volume": 170,
+            "description": "that's pretty one!",
+            "image": "Капучино.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Двойной капучино",
+            "cost": 150,
+            "volume": 250,
+            "description": "that's pretty one!",
+            "image": "Капучино.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Латте",
+            "cost": 140,
+            "volume": 200,
+            "description": "that's pretty one!",
+            "image": "Латте.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Флэт Уайт",
+            "cost": 140,
+            "volume": 170,
+            "description": "that's pretty one!",
+            "image": "Флэт Уайт.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Раф",
+            "cost": 160,
+            "volume": 200,
+            "description": "that's pretty one!",
+            "image": "Раф.jpg",
+            "type_id": 1
+      },
+      {
+            "name": "Альтернативный кофе",
+            "cost": 140,
+            "volume": 250,
+            "description": "that's pretty one!",
+            "image": "Альтернативный кофе.jpg",
+            "type_id": 1
+      }
 ]
+

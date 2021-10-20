@@ -84,8 +84,12 @@ class DatabaseUtils(object, metaclass=Singleton):
         query = f"""
         SELECT COUNT(*) FROM {table}
         """
-
         return self.exec_fetchone(query)
+
+    def get_rows_count_with_param(self, table, column, value):
+        query = f"""
+        SELECT COUNT(*) FROM {table} WHERE {column} = {value}"""
+        return self.exec_fetchall(query)
 
     def close(self):
         if self.conn: self.conn.close()
@@ -96,9 +100,9 @@ class DatabaseUtils(object, metaclass=Singleton):
         """
         return self.exec_fetchall(query)
 
-    def get_type(self, table, type):
+    def get_dishes_with_type(self, table, type):
         query = f"""
-        SELECT * FROM {table} WHERE type={type}"""
+        SELECT * FROM {table} WHERE type_id={type}"""
         return self.exec_fetchall(query)
 
     def get_by_ids(self, ids, table):
@@ -129,4 +133,4 @@ class DatabaseUtils(object, metaclass=Singleton):
 
     def delete_table(self, table_name):
         query = f"DROP TABLE {table_name}"
-        return self.exec_one_value(query)
+        return self.exec(query)

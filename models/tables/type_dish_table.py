@@ -13,18 +13,18 @@ class TypeDish(object):
 
     @staticmethod
     def delete_table():
-        return DatabaseUtils.delete_table(TABLE_NAME)
+        return DatabaseUtils().delete_table(TABLE_NAME)
 
     @staticmethod
     def delete_all():
-        return DatabaseUtils.delete_all(TABLE_NAME)
+        return DatabaseUtils().delete_all(TABLE_NAME)
 
     @staticmethod
     def add_types(name):
         col_list = ['name']
         values = name
-        return DatabaseUtils.add_one_column(TABLE_NAME, col_list, values)
+        return DatabaseUtils().add_one_column(TABLE_NAME, col_list, values)
 
     @staticmethod
     def get_types():
-        return [DishType.fromTuple(tuple) for tuple in DatabaseUtils.get(TABLE_NAME)]
+        return [DishType.fromTuple(tuple) for tuple in DatabaseUtils().get(TABLE_NAME)]

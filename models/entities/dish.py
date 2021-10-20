@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Dish:
     dish_name: str
     description: str
-    type: str
+    type_id: int
     cost: int
     volume: int
     image: str
