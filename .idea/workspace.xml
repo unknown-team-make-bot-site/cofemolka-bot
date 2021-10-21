@@ -42,7 +42,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -282,10 +282,10 @@
     <state width="673" height="279" key="GridCell.Tab.1.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632733542541" />
     <state width="949" height="359" key="GridCell.Tab.1.right/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783069259" />
     <state width="1515" height="247" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1634796496493">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1634797981735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634796496493" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634797981735" />
     <state x="435" y="33" key="new project wizard" timestamp="1626982210239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
