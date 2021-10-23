@@ -1,17 +1,35 @@
 import datetime
 import sqlite3 as sql
-
+import psycopg2 as psql
 from singleton import Singleton
 
 
 class DatabaseUtils(object, metaclass=Singleton):
     TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
-
+    '''
+    if using sqlite3
     def __init__(self):
         self.conn = sql.connect('../mydb.db', check_same_thread=False)
 
     def connect(self):
         self.conn = sql.connect('../mydb.db', check_same_thread=False)
+
+    '''
+
+    def __init__(self):
+        self.conn = psql.connect("dbname = dishes user=postgres password=baguvix")
+
+    def connect(self):
+        print("Connection to postgresql database...")
+        self.conn = psql.connect("dbname = dishes user=postgres password=baguvix")
+        cur = self.conn.cursor()
+        print('Postgresql database version:')
+        cur.execute('SELECT version()')
+
+        db_version = cur.fetchone()
+        print(db_version)
+
+        cur.close()
 
     def create_table(self, tablename, cols_str):
         current = self.conn.cursor()

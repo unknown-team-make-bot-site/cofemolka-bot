@@ -34,13 +34,13 @@ def hello(message):
 
 @bot.message_handler(commands=['start'])
 def start_handler(message):
-    global step, admin, start
+    global step, admin
     # insert_data()
     if (message.chat.id in config.admins.values()):
         admin = True
-        start.add("Панель админа")
+        interface.start.add("Панель админа")
     hello(message)
-    bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=start)
+    bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=interface.start)
 
 def get_feedbacks_str():
     feedbacks = FeedbackTable.get_feedbacks()
@@ -71,7 +71,8 @@ def show_deserts(message):
 
 @bot.message_handler(regexp="Назад")
 def back(message):
-    bot.send_message(message.chat.id, text="Выберите категорию:", reply_markup=start)
+    bot.send_message(message.chat.id, text="Выберите категорию:", reply_markup=interface.start)
+
 @bot.message_handler(regexp="Другие напитки")
 def show_other(message):
     global step

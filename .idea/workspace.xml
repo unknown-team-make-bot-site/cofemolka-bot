@@ -186,9 +186,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.database_check" />
         <item itemvalue="Python.types" />
         <item itemvalue="Python.insert_data" />
-        <item itemvalue="Python.database_check" />
         <item itemvalue="Python.process_menu_image" />
         <item itemvalue="Python.database_utils" />
       </list>
@@ -234,30 +234,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="191" key="FileChooserDialogImpl/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1632984293410" />
-    <state width="1515" height="247" key="GridCell.Tab.0.bottom" timestamp="1634765947775">
+    <state width="1515" height="278" key="GridCell.Tab.0.bottom" timestamp="1635005266363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
-    <state width="1515" height="247" key="GridCell.Tab.0.center" timestamp="1634765947775">
+    <state width="1515" height="278" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635005266363" />
+    <state width="1515" height="278" key="GridCell.Tab.0.center" timestamp="1635005266363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.center/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
-    <state width="1515" height="247" key="GridCell.Tab.0.left" timestamp="1634765947775">
+    <state width="1515" height="278" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635005266363" />
+    <state width="1515" height="278" key="GridCell.Tab.0.left" timestamp="1635005266363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186101" />
     <state width="949" height="359" key="GridCell.Tab.0.left/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
-    <state width="1515" height="247" key="GridCell.Tab.0.right" timestamp="1634765947775">
+    <state width="1515" height="278" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635005266363" />
+    <state width="1515" height="278" key="GridCell.Tab.0.right" timestamp="1635005266363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="335" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1633030186102" />
     <state width="949" height="359" key="GridCell.Tab.0.right/0.0.1536.824/1920.66.1920.1040@1920.66.1920.1040" timestamp="1631783138957" />
-    <state width="1515" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634765947775" />
+    <state width="1515" height="278" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635005266363" />
     <state width="1515" height="247" key="GridCell.Tab.1.bottom" timestamp="1634765947775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -290,11 +290,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="435" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1626982210239" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1634730485309">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1635003964353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.66.1920.1040@0.0.1536.824" timestamp="1631799690104" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1634730485309" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1635003964353" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1634796425750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
