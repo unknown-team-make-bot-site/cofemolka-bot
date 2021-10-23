@@ -17,7 +17,7 @@ class DatabaseUtils(object, metaclass=Singleton):
     '''
 
     def __init__(self):
-        self.conn = psql.connect("dbname = dishes user=postgres password=baguvix")
+        self.conn = psql.connect("dbname = dishes user=postgres password=baguvix", sslmode='require')
 
     def connect(self):
         print("Connection to postgresql database...")
