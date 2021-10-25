@@ -2,7 +2,9 @@ import datetime
 import sqlite3 as sql
 import psycopg2 as psql
 from singleton import Singleton
+import os
 
+DATABASE_URL=os.environ['DATABASE_URL']
 
 class DatabaseUtils(object, metaclass=Singleton):
     TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
@@ -17,11 +19,17 @@ class DatabaseUtils(object, metaclass=Singleton):
     '''
 
     def __init__(self):
+        '''
+        for using local database
         self.conn = psql.connect("dbname = dishes user=postgres password=baguvix", sslmode='require')
-
+        '''
+        self.conn = psql.connect(DATABASE_URL, sslmode="require")
     def connect(self):
+        '''
         print("Connection to postgresql database...")
         self.conn = psql.connect("dbname = dishes user=postgres password=baguvix")
+        '''
+        self.conn = psql.connect(DATABASE_URL, sslmode="require")
         cur = self.conn.cursor()
         print('Postgresql database version:')
         cur.execute('SELECT version()')
