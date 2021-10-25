@@ -81,7 +81,7 @@ class DatabaseUtils(object, metaclass=Singleton):
         INSERT INTO
         {table} ({columns})
         VALUES
-        (DEFAULT, '{values}') RETURNING "id";
+        (DEFAULT, '{values}') RETURNING 'id';
         """
         cursor = self.exec_one_value(query)
         return cursor.lastrowid
