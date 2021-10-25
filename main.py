@@ -6,6 +6,7 @@ from interface import coffee, snacks, other, tea, milkshakes, menu, admin_view, 
 from models.tables.feedback_table import FeedbackTable
 from models.tables.menu_table import MenuTable
 import os
+from config import emojis
 
 
 bot = telebot.TeleBot(config.conf['TOKEN'])
@@ -43,6 +44,7 @@ def get_feedbacks_str():
     return f_str if f_str else 'Пока что нет отзывов'
 
 @bot.message_handler(commands=["Кофе"])
+@bot.message_handler(regexp=f"{emojis['Кофе']}Кофе")
 def show_coffee(message):
     global step
     step = "coffee"
