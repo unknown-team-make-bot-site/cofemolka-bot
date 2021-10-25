@@ -60,7 +60,7 @@ class DatabaseUtils(object, metaclass=Singleton):
         if not self.conn:
             self.connect()
         cursor = self.conn.cursor()
-        cursor.execute(query % value)
+        cursor.execute(query, value)
         self.conn.commit()
         return cursor
 
