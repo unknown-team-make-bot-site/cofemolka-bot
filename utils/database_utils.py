@@ -79,7 +79,7 @@ class DatabaseUtils(object, metaclass=Singleton):
         columns = ", ".join([col for col in col_list])
         query = f"""
         INSERT INTO
-        {table} ('{columns}')
+        {table} ({columns})
         VALUES
         ('{values}');
         """
