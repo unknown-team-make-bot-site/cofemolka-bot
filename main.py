@@ -43,7 +43,6 @@ def get_feedbacks_str():
     return f_str if f_str else 'Пока что нет отзывов'
 
 @bot.message_handler(commands=["Кофе"])
-@bot.message_handler(regexp="кофе")
 def show_coffee(message):
     global step
     step = "coffee"
