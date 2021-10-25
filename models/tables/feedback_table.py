@@ -18,7 +18,7 @@ class FeedbackTable(object):
     def add_feedback(text):
         col_list = ['feedback_text']
         values = text
-        return DatabaseUtils().add_one_column(TABLE_NAME, col_list, values)
+        return DatabaseUtils().add_one_column(TABLE_NAME, col_list=col_list, values=values)
 
     @staticmethod
     def delete_all():
