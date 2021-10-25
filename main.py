@@ -56,7 +56,7 @@ def show_coffee(message):
     text = get_dishes_with_type(step)
     bot.send_message(message.chat.id, text,reply_markup=coffee)
 
-@bot.message_handler(regexp=f"{emojis['Перекусить']}Перекусить")
+@bot.message_handler(regexp=f"{emojis['Закуски']}Перекусить")
 def show_snacks(message):
     global step
     step = "eat_something"
