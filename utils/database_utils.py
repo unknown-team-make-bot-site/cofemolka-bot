@@ -60,7 +60,7 @@ class DatabaseUtils(object, metaclass=Singleton):
         if not self.conn:
             self.connect()
         cursor = self.conn.cursor()
-        cursor.execute(query, (value,))
+        cursor.execute(query % value)
         self.conn.commit()
         return cursor
 
@@ -81,7 +81,7 @@ class DatabaseUtils(object, metaclass=Singleton):
         INSERT INTO
         {table} ({columns})
         VALUES
-        (?);
+        (%s);
         """
         cursor = self.exec_one_value(query, value=values)
         return cursor.lastrowid
