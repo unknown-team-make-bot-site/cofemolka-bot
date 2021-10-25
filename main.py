@@ -32,12 +32,17 @@ def hello(message):
 def start_handler(message):
     global step, admin
     # insert_data()
-    if (message.chat.id in config.admins.values()):
-        admin = True
+    user_id = message.chat.id
+    if (admin(user_id)):
         interface.start.add("Панель админа")
     hello(message)
     bot.send_message(message.chat.id, text='Выберите действие:', reply_markup=interface.start)
 
+def admin(id):
+    if (id in config.admins.values()):
+        return True
+    else:
+        return False
 def get_feedbacks_str():
     feedbacks = FeedbackTable.get_feedbacks()
     f_str = "".join([f'{idx + 1}. {f.feedback_text}\n' for idx, f in enumerate(feedbacks)])
@@ -51,14 +56,14 @@ def show_coffee(message):
     text = get_dishes_with_type(step)
     bot.send_message(message.chat.id, text,reply_markup=coffee)
 
-@bot.message_handler(regexp="Перекусить")
+@bot.message_handler(regexp=f"{emojis['Перекусить']}Перекусить")
 def show_snacks(message):
     global step
     step = "eat_something"
     text = get_dishes_with_type(step)
     bot.send_message(message.chat.id, text, reply_markup = snacks)
 
-@bot.message_handler(regexp="Десерты")
+@bot.message_handler(regexp=f"{emojis['Десерты']}Десерты")
 def show_deserts(message):
     global step
     step = "deserts"
@@ -69,21 +74,21 @@ def show_deserts(message):
 def back(message):
     bot.send_message(message.chat.id, text="Выберите категорию:", reply_markup=interface.start)
 
-@bot.message_handler(regexp="Другие напитки")
+@bot.message_handler(regexp=f"{emojis['Другие']}Другие напитки")
 def show_other(message):
     global step
     step = "other"
     text = get_dishes_with_type(step)
     bot.send_message(message.chat.id, text,reply_markup=other)
 
-@bot.message_handler(regexp="Чай")
+@bot.message_handler(regexp=f"{emojis['Чай']}Чай")
 def show_tea(message):
     global step
     step = "tea"
     text = get_dishes_with_type(step)
     bot.send_message(message.chat.id, text,reply_markup=tea)
 
-@bot.message_handler(regexp="Молочные коктейли")
+@bot.message_handler(regexp=f"{emojis['Мол']}Молочные коктейли")
 def show_milkshakes(message):
     global step
     step = "milkshakes"
@@ -133,7 +138,8 @@ def thanks_to_user(message):
 
 @bot.message_handler(regexp="Панель админа")
 def back_to_admin(message):
-    bot.send_message(message.chat.id, text="Приветствуем админа!", reply_markup=admin_view)
+    if (admin(message.chat.id)):
+        bot.send_message(message.chat.id, text="Приветствуем админа!", reply_markup=admin_view)
 
 @bot.message_handler(regexp="Посмотреть бота")
 def back_to_bot(message):
