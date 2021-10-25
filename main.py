@@ -74,7 +74,7 @@ def show_deserts(message):
 def back(message):
     bot.send_message(message.chat.id, text="Выберите категорию:", reply_markup=interface.start)
 
-@bot.message_handler(regexp=f"{emojis['Другие']}Другие напитки")
+@bot.message_handler(regexp=f"{emojis['Напитки']}Другие напитки")
 def show_other(message):
     global step
     step = "other"
