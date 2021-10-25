@@ -65,7 +65,7 @@ start.add(emj['Меню'] + 'Меню блюд', emj['Отзыв'] + 'Остав
 menu = types.ReplyKeyboardMarkup(resize_keyboard=True)
 menu.add(emj['Кофе'] + "Кофе", emj['Закуски'] + "Перекусить")
 menu.add(emj['Десерты'] + "Десерты",emj['Напитки'] + "Другие напитки")
-menu.add("Чай", "Молочные коктейли")
+menu.add(emj['Чай'] + "Чай", emj['Мол'] + "Молочные коктейли")
 menu.add(emj['Назад'] + "Назад")
 
 start_admin = types.ReplyKeyboardMarkup(resize_keyboard=True)

@@ -5,9 +5,6 @@ import interface
 from interface import coffee, snacks, other, tea, milkshakes, menu, admin_view, deserts
 from models.tables.feedback_table import FeedbackTable
 from models.tables.menu_table import MenuTable
-import requests
-import json
-import string
 import os
 
 
@@ -23,8 +20,6 @@ dish_types = {
     "milkshakes": 5,
     "other": 6
 }
-
-
 
 @bot.message_handler(commands=['hello'])
 def hello(message):
@@ -141,7 +136,7 @@ def back_to_admin(message):
 
 @bot.message_handler(regexp="Посмотреть бота")
 def back_to_bot(message):
-    bot.send_message(message.chat.id,text="Приветствуем админа!", reply_markup=start)
+    bot.send_message(message.chat.id, text="Приветствуем админа!", reply_markup=interface.start)
 
 @bot.callback_query_handler(func=lambda call: call.data.isdigit())
 def process_digit_buttons(call):
