@@ -1,9 +1,12 @@
 # cofemolka-bot
-it's telegram bot for coffee room "кофемолка":
-1. Check menu online
-2. Give feedback 
 
+# tech stack
+- pyTelegramBotApi (telebot)
+- postgresql (or sqlite3, there is also code for sqlite3)
+- heroku
+- tesseract for processing image to text
 
-1. /start 
-2. Меню блюд
-* 
+# forwhat
+- feedback from clients
+- show menu
+- show feedbacks
