@@ -43,6 +43,7 @@ def admin(id):
         return True
     else:
         return False
+
 def get_feedbacks_str():
     feedbacks = FeedbackTable.get_feedbacks()
     f_str = "".join([f'{idx + 1}. {f.feedback_text}\n' for idx, f in enumerate(feedbacks)])
@@ -164,35 +165,3 @@ def readBlobData(photo):
     photoPath = os.getcwd() + photo + ".jpg"
     writeToFile(photo, photoPath)
 
-'''
-Okay, so i need to send
-    description and image when
-        user clicked to text that is digit 
-        
-if message.text.isdigit() then 
-    check current step
-    if step is coffee (or any other dish) then
-        
-            getCoffeeFromDb("SELECT * from dish where type = "coffee")
-            get_menu_str() ==> dishes
-            for (el in dishes)
-            id array element in array
-            for (el, idx in enumerate(array))
-                if message.text.digit == idx then
-                    send coffee[message.text.digit][description] && coffee[message.text.digit][image]
-                    
-Problem 1:
-1. add content to menu V
-2. markup in main file is excess, need to create new file with other MORE comfortable structure 
-
-then if else branching 
-
-content // complete
-need to insert data // complete
-admin panel should be working, how to check if admin user or not?
-created buttons prevent reading main chat-bot logic, so it needed to add in other file
-feedback button is not working, so it is immediately send "thanks": // complete 
-    1. user clicked on feedback button
-    2. type something
-    3. Thanks for user! 
-'''
